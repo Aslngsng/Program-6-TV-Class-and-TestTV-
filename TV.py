@@ -25,7 +25,7 @@ class TV():
 
     def set_volume(self, volume):
         if volume <= 0 or volume > 100:
-            self.volume = volume
+            self.volume_level = volume
         else:
             print("The volume must be between 0 and 100")
     
