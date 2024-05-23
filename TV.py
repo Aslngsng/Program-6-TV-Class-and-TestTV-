@@ -6,10 +6,14 @@
 class TV():
     def __init__(self, number_of_tv: str) -> None:
         self.on = False
-        self.state = number_of_tv
+        self.number_of_tv = number_of_tv
+        self.channel = None
     def turn_on(self):
         self.on = True
     def turn_off(self):
         self.on = False
     def display_state(self):
         state = "on" if self.on else "off"
+    def prefer_channel (self, channel: int):
+        self.channel = channel
+        print (self.number_of_tv + "is set to channel " + self.channel)
