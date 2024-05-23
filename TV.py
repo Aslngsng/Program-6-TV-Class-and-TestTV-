@@ -7,13 +7,27 @@ class TV():
     def __init__(self, number_of_tv: str) -> None:
         self.on = False
         self.number_of_tv = number_of_tv
-        self.channel = None
+        self.channel = 1
+        self.volume_level = 0
+
     def turn_on(self):
         self.on = True
+
     def turn_off(self):
         self.on = False
+
     def display_state(self):
         state = "on" if self.on else "off"
+        print("The " + self.number_of_tv + " is " + state)
+
     def prefer_channel (self, channel: int):
         self.channel = channel
-        print (self.number_of_tv + "is set to channel " + self.channel)
+
+    def set_volume(self, volume):
+        if volume <= 0 or volume > 100:
+            self.volume = volume
+        else:
+            print("The volume must be between 0 and 100")
+    
+    def display_settings(self):
+        print ("The " + self.number_of_tv + " is set to channel " + str(self.channel) + "and the volume level is " + self.volume_level)
