@@ -24,10 +24,10 @@ class TV():
         self.channel = channel
 
     def set_volume(self, volume):
-        if volume <= 0 or volume > 100:
+        if 0 <= volume <= 100:
             self.volume_level = volume
         else:
             print("The volume must be between 0 and 100")
     
     def display_settings(self):
-        print ("The " + self.number_of_tv + " is set to channel " + str(self.channel) + "and the volume level is " + self.volume_level)
+        print ("The " + self.number_of_tv + " is set to channel " + str(self.channel) + "and the volume level is " + str(self.volume_level))

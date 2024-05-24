@@ -1,7 +1,7 @@
 from TV import TV
 
 tv1 = TV("tv1")
-tv1.turn_on() 
+tv1.turn_on()
 tv1.prefer_channel(30)
 tv1.set_volume(3)
 tv2 = TV("tv2")
